@@ -29,7 +29,8 @@ public class TransferFileService {
        List< FileTransfer > files = transferFTPService.execute();
 
        for( FileTransfer fileTransfer : files ) {
-           var uuid = filesService.execute( Files.builder()
+           String
+                   uuid = filesService.execute( Files.builder()
                                     .path( fileTransfer.getPath() )
                                     .build() );
 

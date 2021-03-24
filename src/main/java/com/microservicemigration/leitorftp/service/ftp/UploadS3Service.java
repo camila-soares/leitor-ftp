@@ -37,7 +37,7 @@ public class UploadS3Service {
         newClient.setS3ClientOptions( S3ClientOptions.builder().setPathStyleAccess( true ).build());
         newClient.setEndpoint(s3Host);
 
-        var newNameFile = createName(nameFile);
+        String newNameFile = createName(nameFile);
 
         newClient.putObject( s3Bucket, nameFile, file );
 
@@ -46,7 +46,7 @@ public class UploadS3Service {
 
     private String createName( String nameFile ) {
 
-        var date = new SimpleDateFormat( "yyyyMMddHHmmssSSS").format( new Date() );
+        String date = new SimpleDateFormat( "yyyyMMddHHmmssSSS").format( new Date() );
         return date.concat( "_" ).concat( nameFile );
     }
 }

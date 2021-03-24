@@ -48,7 +48,7 @@ public class TransferFTPService {
 
             //llista os arquivo
             String[] arqs = ftpClient.listNames();
-            for( var itemFile: arqs ) {
+            for( String itemFile: arqs ) {
 
                 String remoteFile1 = itemFile;
                 File file = new File( itemFile );
