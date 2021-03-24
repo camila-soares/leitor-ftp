@@ -1,12 +1,11 @@
 package com.microservicemigration.leitorftp;
 
-import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 class LeitorFtpApplicationTests {
 
-	@Test
+	//@Test
 	void contextLoads() {
 	}
 
