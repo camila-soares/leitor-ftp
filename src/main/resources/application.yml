@@ -12,9 +12,9 @@ spring:
     test-on-borrow: true
 
   jpa:
+    show-sql: true
     hibernate:
-      show-sql: true
-      ddl-auto: create
+      ddl-auto: update
       naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
 
 
