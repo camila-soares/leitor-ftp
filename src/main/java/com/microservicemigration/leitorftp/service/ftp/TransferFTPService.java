@@ -67,8 +67,7 @@ public class TransferFTPService {
                 }
             }
         }catch( Exception e ) {
-                System.out.println( "Error" + e.getMessage() );
-                e.printStackTrace();
+                log.error( "Error" + e.getMessage() );
         }finally {
             try {
                 if( ftpClient.isConnected() ) {
@@ -76,7 +75,7 @@ public class TransferFTPService {
                     ftpClient.disconnect();
                 }
             }catch( IOException ex ) {
-                ex.printStackTrace();
+                log.error( "Error", ex );
             }
         }
         return returnList;

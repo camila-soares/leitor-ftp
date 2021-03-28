@@ -39,9 +39,9 @@ public class UploadS3Service {
 
         String newNameFile = createName(nameFile);
 
-        newClient.putObject( s3Bucket, nameFile, file );
+        newClient.putObject( s3Bucket, newNameFile, file );
 
-        return FileTransfer.builder().path(nameFile).build();
+        return FileTransfer.builder().path(newNameFile).build();
     }
 
     private String createName( String nameFile ) {
