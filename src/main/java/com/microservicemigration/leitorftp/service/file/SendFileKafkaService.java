@@ -33,6 +33,7 @@ public class SendFileKafkaService {
             firstLine = in.nextLine();
             break;
         }
+        in.close();
 
         String topic = null;
         if(SISTEMA_1.equals( firstLine ) ) {
